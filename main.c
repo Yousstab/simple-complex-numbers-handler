@@ -53,6 +53,7 @@ int main(void) {
 
 void oneComplex() {
     complex_number complexNumber;
+    errorWrap error;
     setupComplexNumber(&complexNumber);
 
     char choice = "";
@@ -121,8 +122,12 @@ void oneComplex() {
                     break;
                 case '6':
                         complex_number complexReciprocalResult;
-                        complexReciprocal(&complexNumber,&complexReciprocalResult);
-                        displayComplexNumber(&complexReciprocalResult);
+                        complexReciprocal(&complexNumber,&complexReciprocalResult,&error);
+                        if (error.errorPresent==FALSE) {
+                            displayComplexNumber(&complexReciprocalResult);
+                        }else {
+                            printf(error.errorMessage);
+                        }
                     break;
                 default:
                     printf("pick a valid choice.\n\n");
@@ -136,6 +141,7 @@ void oneComplex() {
 
 void twoComplex() {
     complex_number complexNumber1, complexNumber2;
+    errorWrap error;
     printf("Enter the first complex number:\n");
     setupComplexNumber(&complexNumber1);
     printf("Enter the second complex number:\n");
@@ -184,8 +190,13 @@ void twoComplex() {
                     break;
                 case '6':
                     complex_number complexDivisionResult;
-                    complexDiv(&complexDivisionResult, &complexNumber1, &complexNumber2);
-                    displayComplexNumber(&complexDivisionResult);
+                    complexDiv(&complexDivisionResult, &complexNumber1, &complexNumber2,&error);
+                    if (error.errorPresent==FALSE) {
+                        displayComplexNumber(&complexDivisionResult);
+                    }else {
+                        printf(error.errorMessage);
+                    }
+
                     break;
                 default:
                     printf("pick a valid choice.\n\n");

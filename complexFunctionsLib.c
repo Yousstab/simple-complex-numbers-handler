@@ -93,15 +93,21 @@ void complexMultip(complex_number *complexMultiplicationResult, complex_number *
     cartesianSetup(complexMultiplicationResult, resultReal, resultImaginary);
 }
 
-void complexDiv(complex_number *complexDivisionResult, complex_number *complexNumber1,complex_number *complexNumber2) {
+void complexDiv(complex_number *complexDivisionResult, complex_number *complexNumber1,complex_number *complexNumber2,errorWrap* error) {
     complex_number reciprocal2;
-    complexReciprocal(complexNumber2,&reciprocal2);
+    complexReciprocal(complexNumber2,&reciprocal2,error);
     complexMultip(complexDivisionResult,complexNumber1,&reciprocal2);
 
 }
 
-void complexReciprocal(complex_number *complexNumber, complex_number *complexReciprocal) {
-    double realResult=complexNumber->real/(complexNumber->real*complexNumber->real+complexNumber->imaginary*complexNumber->imaginary);
-    double imaginaryResult=-complexNumber->imaginary/(complexNumber->real*complexNumber->real+complexNumber->imaginary*complexNumber->imaginary);
-    cartesianSetup(complexReciprocal, realResult, imaginaryResult);
+void complexReciprocal(complex_number *complexNumber, complex_number *complexReciprocal,errorWrap *error) {
+    if (complexNumber->real == 0 && complexNumber->imaginary == 0) {
+        error->errorPresent=TRUE;
+        strcpy( error->errorMessage,"division by zero\n");
+
+    }else {
+        double realResult=complexNumber->real/(complexNumber->real*complexNumber->real+complexNumber->imaginary*complexNumber->imaginary);
+        double imaginaryResult=-complexNumber->imaginary/(complexNumber->real*complexNumber->real+complexNumber->imaginary*complexNumber->imaginary);
+        cartesianSetup(complexReciprocal, realResult, imaginaryResult);
+    }
 }

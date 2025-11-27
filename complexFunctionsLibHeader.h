@@ -2,8 +2,11 @@
 #ifndef COMPLEXFUNCTIONSLIBHEADER_H
 #define COMPLEXFUNCTIONSLIBHEADER_H
 #include <math.h>
+#include <string.h>
 #define PI 3.14159265358979323846
 #define E 2.7182818
+
+
 typedef enum {
     RADIANS = 0,
     DEGREES = 1
@@ -28,6 +31,11 @@ typedef struct {
     double magnitude;
     angle_struct angle;
 } complex_number;
+
+typedef struct {
+    bool errorPresent;
+    char errorMessage[256];
+}errorWrap;
 double degreesToRadians(double degrees);
 double radiansToDegrees(double radians);
 
@@ -50,6 +58,6 @@ void complexRotate(complex_number *complexNumber, complex_number *complexRotatio
 void complexSum(complex_number *complexSum, complex_number *complexNumber1, complex_number *complexNumber2);
 void complexDiff(complex_number *complexDiff, complex_number *complexNumber1, complex_number *complexNumber2);
 void complexMultip(complex_number *complexMultiplicationResult, complex_number *complexNumber1,complex_number *complexNumber2);
-void complexDiv(complex_number *complexDivisionResult, complex_number *complexNumber1,complex_number *complexNumber2);
-void complexReciprocal(complex_number *complexNumber, complex_number *complexReciprocal);
+void complexDiv(complex_number *complexDivisionResult, complex_number *complexNumber1,complex_number *complexNumber2,errorWrap *error);
+void complexReciprocal(complex_number *complexNumber, complex_number *complexReciprocal,errorWrap *error);
 #endif //COMPLEXFUNCTIONSLIBHEADER_H
