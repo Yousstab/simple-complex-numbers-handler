@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "complexFunctionsLibHeader.h"
 
 
@@ -11,7 +12,8 @@ void cartesianInput(complex_number *complexNumber);
 void polarInput(complex_number *complexNumber);
 
 void setupComplexNumber(complex_number *complexNumber);
-void displayComplexNumber(complex_number *complexNumber);
+void displayFullComplexNumber(complex_number *complexNumber);
+void displayLittleComplexNumber(complex_number *complexNumber) ;
 
 
 
@@ -71,12 +73,12 @@ void oneComplex() {
         if (choice != 'e') {
             switch (choice) {
                 case '1':
-                    displayComplexNumber(&complexNumber);
+                    displayFullComplexNumber(&complexNumber);
                     break;
                 case '2':
                     complex_number conjugate;
                     complexConjugate(&complexNumber, &conjugate);
-                    displayComplexNumber(&conjugate);
+                    displayFullComplexNumber(&conjugate);
                     break;
                 case '3':
                     complex_number complexPower;
@@ -85,10 +87,21 @@ void oneComplex() {
                     scanf(" %lf", &power);
                     printf("\n");
                     complexRaisePowerDeMoivre(&complexNumber, &complexPower, power);
-                    displayComplexNumber(&complexPower);
+                    displayFullComplexNumber(&complexPower);
                     break;
                 case '4':
-                    nonImplementedError();
+                    complex_number* complex_roots;
+                    int numRoots;
+                    printf("number of roots?");
+                    scanf(" %d", &numRoots);
+                    complex_roots=(complex_number*)malloc(numRoots*sizeof(complex_number));
+                    complexFindRoots(&complexNumber,numRoots,complex_roots);
+                    for (int i = 0; i < numRoots; i++) {
+                        printf("root %d\n",i+1);
+                        displayLittleComplexNumber(&complex_roots[i]);
+                        printf("----------------------\n");
+                    }
+                    free(complex_roots);
                     break;
                 case '5':
                     complex_number complexRotation;
@@ -117,14 +130,14 @@ void oneComplex() {
                         }
                     }
                     complexRotate(&complexNumber, &complexRotation, rotation, angleType);
-                    displayComplexNumber(&complexRotation);
+                    displayFullComplexNumber(&complexRotation);
 
                     break;
                 case '6':
                         complex_number complexReciprocalResult;
                         complexReciprocal(&complexNumber,&complexReciprocalResult,&error);
                         if (error.errorPresent==FALSE) {
-                            displayComplexNumber(&complexReciprocalResult);
+                            displayFullComplexNumber(&complexReciprocalResult);
                         }else {
                             printf(error.errorMessage);
                         }
@@ -135,7 +148,7 @@ void oneComplex() {
             }
         }
     }
-    displayComplexNumber(&complexNumber);
+    displayFullComplexNumber(&complexNumber);
 }
 
 
@@ -162,37 +175,37 @@ void twoComplex() {
         if (choice != 'e') {
             switch (choice) {
                 case '1':
-                    displayComplexNumber(&complexNumber1);
-                    displayComplexNumber(&complexNumber2);
+                    displayFullComplexNumber(&complexNumber1);
+                    displayFullComplexNumber(&complexNumber2);
                     break;
                 case '2':
                     complex_number conjugate1, conjugate2;
 
                     complexConjugate(&complexNumber1, &conjugate1);
-                    displayComplexNumber(&conjugate1);
+                    displayFullComplexNumber(&conjugate1);
                     complexConjugate(&complexNumber2, &conjugate2);
-                    displayComplexNumber(&conjugate2);
+                    displayFullComplexNumber(&conjugate2);
                     break;
                 case '3':
                     complex_number complexSumResult;
                     complexSum(&complexSumResult, &complexNumber1, &complexNumber2);
-                    displayComplexNumber(&complexSumResult);
+                    displayFullComplexNumber(&complexSumResult);
                     break;
                 case '4':
                     complex_number complexDiffResult;
                     complexDiff(&complexDiffResult, &complexNumber1, &complexNumber2);
-                    displayComplexNumber(&complexDiffResult);
+                    displayFullComplexNumber(&complexDiffResult);
                     break;
                 case '5':
                     complex_number complexMultiplicationResult;
                     complexMultip(&complexMultiplicationResult, &complexNumber1, &complexNumber2);
-                    displayComplexNumber(&complexMultiplicationResult);
+                    displayFullComplexNumber(&complexMultiplicationResult);
                     break;
                 case '6':
                     complex_number complexDivisionResult;
                     complexDiv(&complexDivisionResult, &complexNumber1, &complexNumber2,&error);
                     if (error.errorPresent==FALSE) {
-                        displayComplexNumber(&complexDivisionResult);
+                        displayFullComplexNumber(&complexDivisionResult);
                     }else {
                         printf(error.errorMessage);
                     }
@@ -206,7 +219,7 @@ void twoComplex() {
     }
 }
 
-void displayComplexNumber(complex_number *complexNumber) {
+void displayFullComplexNumber(complex_number *complexNumber) {
     printf("The complex number is:\n");
     if (complexNumber->imaginary < 0) {
         printf("cartesian form: %.2lf - i(%.2lf)\n", complexNumber->real, -complexNumber->imaginary);
@@ -225,6 +238,19 @@ void displayComplexNumber(complex_number *complexNumber) {
     printf("argument in degrees: %.2lf\n", complexNumber->angle.argumentInDegrees);
     printf("principal value in degrees %.2lf\n", complexNumber->angle.principalValueInDegrees);
     printf("principal value in radians %.2lfpi\n", complexNumber->angle.principalValueInRadians / PI);
+}
+
+void displayLittleComplexNumber(complex_number *complexNumber) {
+    printf("The complex number is:\n");
+    if (complexNumber->imaginary < 0) {
+        printf("cartesian form: %.2lf - i(%.2lf)\n", complexNumber->real, -complexNumber->imaginary);
+    } else {
+        printf("cartesian form: %.2lf + i(%.2lf)\n", complexNumber->real, complexNumber->imaginary);
+    }
+    printf("polar form(radians): %.2lf(cos(%.2lfpi)+isin(%.2lfpi))\n", complexNumber->magnitude,
+           complexNumber->angle.argumentInRadians / PI, complexNumber->angle.argumentInRadians / PI);
+    printf("polar form(degrees): %.2lf(cos(%.2lf)+isin(%.2lf))\n", complexNumber->magnitude,
+           complexNumber->angle.argumentInDegrees, complexNumber->angle.argumentInDegrees);
 }
 
 void setupComplexNumber(complex_number *complexNumber) {

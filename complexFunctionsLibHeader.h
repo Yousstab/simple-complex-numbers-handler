@@ -52,7 +52,7 @@ void polarSetup(complex_number *complexNumber, double magnitude, double angle, i
 void complexConjugate(complex_number *complexNumber, complex_number *complexConjugateResult);
 void complexRaisePowerDeMoivre(complex_number *complexNumber, complex_number *complexPower, double power);
 void complexRotate(complex_number *complexNumber, complex_number *complexRotation, double rotation, int angleType);
-
+void complexFindRoots(complex_number *complexBase, int numRoots, complex_number* complexRoots);
 
 
 void complexSum(complex_number *complexSum, complex_number *complexNumber1, complex_number *complexNumber2);

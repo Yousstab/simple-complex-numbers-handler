@@ -15,6 +15,16 @@ void complexConjugate(complex_number *complexNumber, complex_number *complexConj
     cartesianSetup(complexConjugateResult, conjugateReal, conjugateImaginary);
 }
 
+void complexFindRoots(complex_number *complexBase, int numRoots, complex_number* complexRoots) {
+    double rootMagnitude=sqrt(complexBase->magnitude); // to implement general n-root version works only for 2 roots.
+    //to check num roots not zero
+    for (int i = 0; i < numRoots; i++) {
+            double angle=complexBase->angle.argumentInRadians/numRoots+(2*i*PI)/numRoots;
+            polarSetup(&complexRoots[i],rootMagnitude,angle,RADIANS);
+    }
+    // error result if i input,
+}
+
 void cartesianSetup(complex_number *complexNumber, double real, double imaginary) {
     double magnitude = 0;
     double argumentInRadians = 0;
