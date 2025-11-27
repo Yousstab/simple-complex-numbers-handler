@@ -5,7 +5,7 @@
 #include <string.h>
 #define PI 3.14159265358979323846
 #define E 2.7182818
-
+#define ERROR_LENGTH 256
 
 typedef enum {
     RADIANS = 0,
@@ -34,7 +34,7 @@ typedef struct {
 
 typedef struct {
     bool errorPresent;
-    char errorMessage[256];
+    char errorMessage[ERROR_LENGTH];
 }errorWrap;
 double degreesToRadians(double degrees);
 double radiansToDegrees(double radians);
@@ -52,7 +52,7 @@ void polarSetup(complex_number *complexNumber, double magnitude, double angle, i
 void complexConjugate(complex_number *complexNumber, complex_number *complexConjugateResult);
 void complexRaisePowerDeMoivre(complex_number *complexNumber, complex_number *complexPower, double power);
 void complexRotate(complex_number *complexNumber, complex_number *complexRotation, double rotation, int angleType);
-void complexFindRoots(complex_number *complexBase, int numRoots, complex_number* complexRoots);
+void complexFindRoots(complex_number *complexBase, int numRoots, complex_number* complexRoots,errorWrap* error);
 
 
 void complexSum(complex_number *complexSum, complex_number *complexNumber1, complex_number *complexNumber2);

@@ -92,14 +92,19 @@ void oneComplex() {
                 case '4':
                     complex_number* complex_roots;
                     int numRoots;
-                    printf("number of roots?");
+                    printf("number of roots: ");
                     scanf(" %d", &numRoots);
                     complex_roots=(complex_number*)malloc(numRoots*sizeof(complex_number));
-                    complexFindRoots(&complexNumber,numRoots,complex_roots);
-                    for (int i = 0; i < numRoots; i++) {
-                        printf("root %d\n",i+1);
-                        displayLittleComplexNumber(&complex_roots[i]);
-                        printf("----------------------\n");
+                    complexFindRoots(&complexNumber,numRoots,complex_roots,&error);
+                    if (error.errorPresent==FALSE) {
+                        for (int i = 0; i < numRoots; i++) {
+                            printf("root %d\n",i+1);
+                            displayLittleComplexNumber(&complex_roots[i]);
+                            printf("----------------------\n");
+                        }
+                    }else {
+                        printf("error please check\n");
+                        printf("error message: %s \n",error.errorMessage);
                     }
                     free(complex_roots);
                     break;
@@ -139,7 +144,8 @@ void oneComplex() {
                         if (error.errorPresent==FALSE) {
                             displayFullComplexNumber(&complexReciprocalResult);
                         }else {
-                            printf(error.errorMessage);
+                            printf("error please check\n");
+                            printf("error message: %s \n",error.errorMessage);
                         }
                     break;
                 default:
