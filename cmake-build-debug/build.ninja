@@ -61,6 +61,12 @@ build CMakeFiles/complexnumbershandler.dir/complexFunctionsLib.c.obj: C_COMPILER
   OBJECT_DIR = CMakeFiles\complexnumbershandler.dir
   OBJECT_FILE_DIR = CMakeFiles\complexnumbershandler.dir
 
+build CMakeFiles/complexnumbershandler.dir/mathUtil.c.obj: C_COMPILER__complexnumbershandler_unscanned_Debug C$:/Users/tabit/OneDrive/Desktop/complexnumbershandler/mathUtil.c || cmake_object_order_depends_target_complexnumbershandler
+  DEP_FILE = CMakeFiles\complexnumbershandler.dir\mathUtil.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\complexnumbershandler.dir
+  OBJECT_FILE_DIR = CMakeFiles\complexnumbershandler.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target complexnumbershandler
@@ -69,7 +75,7 @@ build CMakeFiles/complexnumbershandler.dir/complexFunctionsLib.c.obj: C_COMPILER
 #############################################
 # Link the executable complexnumbershandler.exe
 
-build complexnumbershandler.exe: C_EXECUTABLE_LINKER__complexnumbershandler_Debug CMakeFiles/complexnumbershandler.dir/main.c.obj CMakeFiles/complexnumbershandler.dir/complexFunctionsLib.c.obj
+build complexnumbershandler.exe: C_EXECUTABLE_LINKER__complexnumbershandler_Debug CMakeFiles/complexnumbershandler.dir/main.c.obj CMakeFiles/complexnumbershandler.dir/complexFunctionsLib.c.obj CMakeFiles/complexnumbershandler.dir/mathUtil.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\complexnumbershandler.dir

@@ -6,6 +6,7 @@
 #define PI 3.14159265358979323846
 #define E 2.7182818
 #define ERROR_LENGTH 256
+#include "mathUtil.h"
 
 typedef enum {
     RADIANS = 0,

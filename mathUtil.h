@@ -6,3 +6,5 @@
 #define MATHUTIL_H
 
 #endif //MATHUTIL_H
+double calculateNthRootBinaryMethod(double degree,double number);
+double calculatePower(double number, int power);
