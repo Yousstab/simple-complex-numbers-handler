@@ -1,16 +1,10 @@
 # ninja log v6
-144	645	7860499017522254	CMakeFiles/complexnumbershandler.dir/main.c.obj	cacc8f1c3255dc8f
-160	652	7860499017672871	CMakeFiles/complexnumbershandler.dir/complexFunctionsLib.c.obj	bdb0a6e1f977afb1
-653	1379	7860499022597984	complexnumbershandler.exe	b24e800501cf572e
-3	389	7861447492363177	build.ninja	f90fdfbe6d084bad
-184	1587	7861447492363177	build.ninja	f90fdfbe6d084bad
-91	262	7861447495976029	CMakeFiles/complexnumbershandler.dir/mathUtil.c.obj	dc1ef90f1306cccb
-81	301	7861447495876178	CMakeFiles/complexnumbershandler.dir/complexFunctionsLib.c.obj	bdb0a6e1f977afb1
-73	344	7861447495790641	CMakeFiles/complexnumbershandler.dir/main.c.obj	cacc8f1c3255dc8f
-345	863	7861447498512071	complexnumbershandler.exe	87b2bb6d9eadf049
-8	162	7861449343580737	CMakeFiles/complexnumbershandler.dir/mathUtil.c.obj	dc1ef90f1306cccb
-164	410	7861449345137605	complexnumbershandler.exe	87b2bb6d9eadf049
-39	230	7861463270585469	CMakeFiles/complexnumbershandler.dir/mathUtil.c.obj	dc1ef90f1306cccb
-29	244	7861463270485333	CMakeFiles/complexnumbershandler.dir/complexFunctionsLib.c.obj	bdb0a6e1f977afb1
 9	304	7861463270288244	CMakeFiles/complexnumbershandler.dir/main.c.obj	cacc8f1c3255dc8f
+29	244	7861463270485333	CMakeFiles/complexnumbershandler.dir/complexFunctionsLib.c.obj	bdb0a6e1f977afb1
 304	522	7861463273233083	complexnumbershandler.exe	87b2bb6d9eadf049
+39	230	7861463270585469	CMakeFiles/complexnumbershandler.dir/mathUtil.c.obj	dc1ef90f1306cccb
+184	1587	7863237627987200	build.ninja	f90fdfbe6d084bad
+251	666	7863881117276749	CMakeFiles/complexnumbershandler.dir/complexFunctionsLib.c.obj	bdb0a6e1f977afb1
+207	707	7863881116845793	CMakeFiles/complexnumbershandler.dir/main.c.obj	cacc8f1c3255dc8f
+10	247	7863881505592770	CMakeFiles/complexnumbershandler.dir/mathUtil.c.obj	dc1ef90f1306cccb
+248	1009	7863881507970216	complexnumbershandler.exe	87b2bb6d9eadf049

@@ -17,7 +17,7 @@ void complexConjugate(complex_number *complexNumber, complex_number *complexConj
 
 void complexFindRoots(complex_number *complexBase, int numRoots, complex_number* complexRoots,errorWrap*error) {
     if (numRoots!=0) {
-        double rootMagnitude=calculateNthRootBinaryMethod(numRoots,complexBase->magnitude); // to implement general n-root version works only for 2 roots.
+        double rootMagnitude=calculateNthRootNewtonMethod(numRoots,complexBase->magnitude); // to implement general n-root version works only for 2 roots.
         //to check num roots not zero
         for (int i = 0; i < numRoots; i++) {
             double angle=complexBase->angle.argumentInRadians/numRoots+(2*i*PI)/numRoots;

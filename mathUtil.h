@@ -7,4 +7,5 @@
 
 #endif //MATHUTIL_H
 double calculateNthRootBinaryMethod(double degree,double number);
+double calculateNthRootNewtonMethod(double degree,double number);
 double calculatePower(double number, int power);

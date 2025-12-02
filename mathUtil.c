@@ -36,7 +36,15 @@ double calculateNthRootBinaryMethod(double degree, double number)
     }
     return sign * root;
 }
-
+double calculateNthRootNewtonMethod(double degree,double number) {
+    double root=5;// select a better point
+    // divide by sign and oddity
+    int steps=10;// add a check for tolerance
+    for(int i=1;i<=steps;i++) {
+        root=1/degree*((degree-1)*root+number/calculatePower(root,degree-1));
+    }
+    return root;
+}
 double calculatePower(double number, int power){
   // to handle double power
   double result=1;
