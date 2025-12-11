@@ -9,3 +9,8 @@
 double calculateNthRootBinaryMethod(double degree,double number);
 double calculateNthRootNewtonMethod(double degree,double number);
 double calculatePower(double number, int power);
+
+// testing
+void utilNthRootComparison(double number,int power);
+double testCalculateNthRootBinaryMethod(double degree, double number);
+double testCalculateNthRootNewtonMethod(double degree, double number);

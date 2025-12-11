@@ -27,6 +27,7 @@ int main(void) {
         printf("2. two complex\n");
         //printf("3. three or more complex\n");
         //printf("4. equation solver\n");
+        printf("u. util testing\n");
         printf("e. exit\n");
         scanf(" %c", &choice);
         printf("\n");
@@ -44,6 +45,9 @@ int main(void) {
                       case '4':
                           nonImplementedError();
                       break;*/
+                case 'u':
+                    utilNthRootComparison(10000,4);
+
                 default:
                     printf("pick a valid choice.\n");
                     break;
