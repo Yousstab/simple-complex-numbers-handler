@@ -3,7 +3,6 @@
 Personal learning project to practice:
 - Multi-file C projects
 - Complex number operations
-- Memory management
 - Menu systems
 
 Work in progress!
