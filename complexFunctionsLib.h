@@ -1,3 +1,9 @@
+//
+// Created by tabit on 21/12/2025.
+//
+
+#ifndef COMPLEXLIB_H
+#define COMPLEXLIB_H
 
 #ifndef COMPLEXFUNCTIONSLIBHEADER_H
 #define COMPLEXFUNCTIONSLIBHEADER_H
@@ -62,3 +68,5 @@ void complexMultip(complex_number *complexMultiplicationResult, complex_number *
 void complexDiv(complex_number *complexDivisionResult, complex_number *complexNumber1,complex_number *complexNumber2,errorWrap *error);
 void complexReciprocal(complex_number *complexNumber, complex_number *complexReciprocal,errorWrap *error);
 #endif //COMPLEXFUNCTIONSLIBHEADER_H
+
+#endif //COMPLEXLIB_H
