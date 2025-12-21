@@ -7,17 +7,17 @@
 typedef struct  {
   complex_number slots[MAXSLOTS];
   bool occupiedSlots[MAXSLOTS];
-}ComplexMemory;
+}complex_memory;
 
-void initializeComplexMemory(ComplexMemory* complexMemory);
+void initializeComplexMemory(complex_memory* complexMemory);
 
-void clearAllComplexMemory(ComplexMemory* complexMemory);
-void clearSlotComplexMemory(ComplexMemory* complexMemory, int slot);
+void clearAllComplexMemory(complex_memory* complexMemory);
+void clearSlotComplexMemory(complex_memory* complexMemory, int slot);
 
-void loadIntoSlotComplexMemory(ComplexMemory* complexMemory, complex_number* complexNumber,int slot);
-void loadIntoMultipleSlotComplexMemory(ComplexMemory* complexMemory, complex_number* complexNumbers,int* slots, int count);
+void loadIntoSlotComplexMemory(complex_memory* complexMemory, complex_number* complexNumber,int slot);
+void loadIntoMultipleSlotComplexMemory(complex_memory* complexMemory, complex_number* complexNumbers,int* slots, int count);
 
-void getSlotComplexMemory(ComplexMemory* complexMemory, complex_number* output,int slot);
-bool isSlotOccupied(ComplexMemory* complexMemory, int slot);
+void getSlotComplexMemory(complex_memory* complexMemory, complex_number* output,int slot);
+bool isSlotOccupied(complex_memory* complexMemory, int slot);
 
 #endif //COMPLEXMEMORY_H

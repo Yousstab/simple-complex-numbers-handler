@@ -1,19 +1,19 @@
 #include"complexMemory.h"
 // add error handling in new module
-void initializeComplexMemory(ComplexMemory* complexMemory){
+void initializeComplexMemory(complex_memory* complexMemory){
   for(int i=0;i<MAXSLOTS;i++){
     complexMemory->occupiedSlots[i] = FALSE;
   }
   //might add startup values in input
 }
 
-void clearAllComplexMemory(ComplexMemory* complexMemory){
+void clearAllComplexMemory(complex_memory* complexMemory){
   for(int i=0;i<MAXSLOTS;i++){
     complexMemory->occupiedSlots[i] = FALSE;
   }
 }
 
-void clearSlotComplexMemory(ComplexMemory* complexMemory,int slot){
+void clearSlotComplexMemory(complex_memory* complexMemory,int slot){
   if(slot < MAXSLOTS&&slot >= 0){
     complexMemory->occupiedSlots[slot] = FALSE;
   }else{
@@ -21,7 +21,7 @@ void clearSlotComplexMemory(ComplexMemory* complexMemory,int slot){
   }
 }
 
-void loadIntoSlotComplexMemory(ComplexMemory* complexMemory, complex_number* complexNumber,int slot){
+void loadIntoSlotComplexMemory(complex_memory* complexMemory, complex_number* complexNumber,int slot){
   //add check overwrite if slot occupied
   if(slot < MAXSLOTS&&slot >= 0){
     complexMemory->slots[slot] = *complexNumber;
@@ -32,13 +32,13 @@ void loadIntoSlotComplexMemory(ComplexMemory* complexMemory, complex_number* com
   }
 }
 
-void loadIntoMultipleSlotComplexMemory(ComplexMemory* complexMemory, complex_number* complexNumbers,int* slots, int count){
+void loadIntoMultipleSlotComplexMemory(complex_memory* complexMemory, complex_number* complexNumbers,int* slots, int count){
   for(int i=0;i<count;i++){
     loadIntoSlotComplexMemory(complexMemory, &complexNumbers[i], slots[i]);
   }
 }
 
-void getSlotComplexMemory(ComplexMemory* complexMemory, complex_number* output,int slot){
+void getSlotComplexMemory(complex_memory* complexMemory, complex_number* output,int slot){
   if(slot < MAXSLOTS&&slot >= 0){
     if(complexMemory->occupiedSlots[slot]==TRUE){
     *output=complexMemory->slots[slot];
@@ -49,7 +49,7 @@ void getSlotComplexMemory(ComplexMemory* complexMemory, complex_number* output,i
   //error
   }
 }
-bool isSlotOccupied(ComplexMemory* complexMemory, int slot){
+bool isSlotOccupied(complex_memory* complexMemory, int slot){
   if(slot < MAXSLOTS&&slot >= 0){
     return complexMemory->occupiedSlots[slot];
   }else{

@@ -1,11 +1,19 @@
 # ninja log v6
-43	632	7871713804803235	CMakeFiles/complexnumbershandler.dir/complexFunctionsLib.c.obj	bdb0a6e1f977afb1
-9	290	7871722425946410	CMakeFiles/complexnumbershandler.dir/main.c.obj	cacc8f1c3255dc8f
-27	248	7871722426119695	CMakeFiles/complexnumbershandler.dir/mathUtil.c.obj	dc1ef90f1306cccb
-290	588	7871722428745797	complexnumbershandler.exe	87b2bb6d9eadf049
-184	1587	7879910864597128	build.ninja	f90fdfbe6d084bad
-198	1400	7879910864597128	build.ninja	f90fdfbe6d084bad
-61	415	7879910867599923	CMakeFiles/complexnumbershandler.dir/mathUtil.c.obj	dc1ef90f1306cccb
+6	217	7880019623000716	CMakeFiles/complexnumbershandler.dir/main.c.obj	cacc8f1c3255dc8f
 55	418	7879910867546569	CMakeFiles/complexnumbershandler.dir/complexFunctionsLib.c.obj	bdb0a6e1f977afb1
-49	419	7879910867479359	CMakeFiles/complexnumbershandler.dir/main.c.obj	cacc8f1c3255dc8f
 419	939	7879910871192855	complexnumbershandler.exe	87b2bb6d9eadf049
+61	415	7879910867599923	CMakeFiles/complexnumbershandler.dir/mathUtil.c.obj	dc1ef90f1306cccb
+198	1400	7880020017106083	build.ninja	f90fdfbe6d084bad
+3	604	7880020017106083	build.ninja	f90fdfbe6d084bad
+77	207	7880020019916600	CMakeFiles/complexnumbershandler.dir/complexMemory.c.obj	13490cb2f235f154
+208	381	7880020021222827	complexnumbershandler.exe	e997543be239a133
+7	282	7880021700707387	CMakeFiles/complexnumbershandler.dir/main.c.obj	cacc8f1c3255dc8f
+283	513	7880021703462183	complexnumbershandler.exe	e997543be239a133
+7	229	7880023320275406	CMakeFiles/complexnumbershandler.dir/main.c.obj	cacc8f1c3255dc8f
+230	435	7880023322502274	complexnumbershandler.exe	e997543be239a133
+6	211	7880024053614079	CMakeFiles/complexnumbershandler.dir/main.c.obj	cacc8f1c3255dc8f
+212	425	7880024055667262	complexnumbershandler.exe	e997543be239a133
+9	461	7880024639763992	CMakeFiles/complexnumbershandler.dir/main.c.obj	cacc8f1c3255dc8f
+463	816	7880024644299456	complexnumbershandler.exe	e997543be239a133
+7	212	7880026081135993	CMakeFiles/complexnumbershandler.dir/main.c.obj	cacc8f1c3255dc8f
+217	434	7880026083236979	complexnumbershandler.exe	e997543be239a133
