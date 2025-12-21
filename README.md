@@ -1,3 +1,13 @@
+# Complex Number Calculator
+
+Personal learning project to practice:
+- Multi-file C projects
+- Complex number operations
+- Menu systems
+
+Work in progress!
+
+# read me future skeleton
 (this was taken from my personal notes on Obsidian, I have yet to refine it for github)
   # project complex numbers handler
   take one, two or more complex numbers and do some operations.
