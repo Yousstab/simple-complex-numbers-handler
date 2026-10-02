@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\samsung\Projects\simple-complex-numbers-handler\build\CMakeFiles\496d380af7f0a06fcc5dd7cc972b9385\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{82098B6C-F0E2-3ADD-B0D9-0D343C5ECFCC}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

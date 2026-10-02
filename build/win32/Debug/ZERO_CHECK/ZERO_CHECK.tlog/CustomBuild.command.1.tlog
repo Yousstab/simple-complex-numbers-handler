@@ -1,0 +1,10 @@
+^C:\USERS\SAMSUNG\PROJECTS\SIMPLE-COMPLEX-NUMBERS-HANDLER\BUILD\CMAKEFILES\496D380AF7F0A06FCC5DD7CC972B9385\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/samsung/Projects/simple-complex-numbers-handler -BC:/Users/samsung/Projects/simple-complex-numbers-handler/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/samsung/Projects/simple-complex-numbers-handler/build/complexnumbershandler.slnx
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

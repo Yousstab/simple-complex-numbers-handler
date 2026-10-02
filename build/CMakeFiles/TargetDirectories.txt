@@ -1,0 +1,3 @@
+C:/Users/samsung/Projects/simple-complex-numbers-handler/build/CMakeFiles/complexnumbershandler.dir
+C:/Users/samsung/Projects/simple-complex-numbers-handler/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/samsung/Projects/simple-complex-numbers-handler/build/CMakeFiles/ZERO_CHECK.dir
