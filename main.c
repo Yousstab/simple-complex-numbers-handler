@@ -389,7 +389,7 @@ void polarInput(complex_number *complexNumber) {
     char choice = "";
     double magnitude = 0;
     double angle = 0;
-    printf("insert magnitude: ");
+    printf("insert magnitude: ");       
     scanf("%lf", &magnitude);
     while (choice != 'r' && choice != 'd') {
         printf("choose input argument type: \n");

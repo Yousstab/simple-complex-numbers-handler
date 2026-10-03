@@ -1,0 +1,26 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C: build project (cl.exe)",
+            "command": "cl.exe",
+            "args": [
+                "/Zi",
+                "/nologo",
+                "/utf-8",
+                "/Fe:${workspaceFolder}\\main.exe",
+                "${workspaceFolder}\\main.c",
+                "${workspaceFolder}\\mathUtil.c",
+                "${workspaceFolder}\\complexFunctionsLib.c",
+                "${workspaceFolder}\\complexMemory.c"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": ["$msCompile"],
+            "group": { "kind": "build", "isDefault": true },
+            "detail": "Builds all four .c files into main.exe"
+        }
+    ]
+}
