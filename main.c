@@ -84,9 +84,13 @@ void oneComplex(complex_memory *complexMemory) {
     printf("\n");
     if (choice == '1') {
         setupComplexNumber(&complexNumber);
-    }else {
-        memoryGetFromSlot(complexMemory,&complexNumber);
+    } else if (choice == '2') {
+    memoryGetFromSlot(complexMemory, &complexNumber, &error);
+    if (error.errorPresent) {
+        printf("%s\n", error.errorMessage);
+        return;
     }
+}
 
     while (choice != 'e') {
         printf("choose: \n");
@@ -185,7 +189,7 @@ void oneComplex(complex_memory *complexMemory) {
 
                     printf("save rotation in memory?\n");
                     printf("y/n\n");
-                    choiceSaveMemory(complexMemory,&rotation);
+                    choiceSaveMemory(complexMemory,&complexRotation);
                     break;
                 case '6':
                         complex_number complexReciprocalResult;
@@ -227,8 +231,11 @@ void twoComplex(complex_memory *complexMemory) {
     printf("\n");
     if (choice == '1') {
         setupComplexNumber(&complexNumber1);
-    }else {
-        memoryGetFromSlot(complexMemory,&complexNumber1);
+    }else if (choice == '2') {
+    memoryGetFromSlot(complexMemory, &complexNumber1, &error);
+    if (error.errorPresent) {
+        printf("%s\n", error.errorMessage);
+        return; 
     }
     printf("please choose enter mode:\n");
     printf("1. console input\n");
@@ -238,8 +245,11 @@ void twoComplex(complex_memory *complexMemory) {
     printf("\n");
     if (choice == '1') {
         setupComplexNumber(&complexNumber2);
-    }else {
-        memoryGetFromSlot(complexMemory,&complexNumber2);
+    }else if (choice == '2') {
+    memoryGetFromSlot(complexMemory, &complexNumber2, &error);
+    if (error.errorPresent) {
+        printf("%s\n", error.errorMessage);
+        return;
     }
 
     while (choice != 'e') {
@@ -281,7 +291,7 @@ void twoComplex(complex_memory *complexMemory) {
 
                     printf("save sum in memory?\n");
                     printf("y/n\n");
-                    choiceSaveMemory(&complexMemory,&complexSumResult);
+                    choiceSaveMemory(complexMemory,&complexSumResult);
                     break;
                 case '4':
                     complex_number complexDiffResult;
@@ -423,14 +433,17 @@ void nonImplementedError() {
     printf("This program does not support this operation yet.\n");
 }
 
-void memoryGetFromSlot(complex_memory* complexMemory,complex_number * complexNumber) {
-    int slot=0;
-    printf("please select a slot to get the complex number from\n");
-    scanf(" %d", &slot);
+void memoryGetFromSlot(complex_memory *complexMemory, complex_number *complexNumber, errorWrap *error) {
+    int slot = 0;
+    printf("please select a slot (0-%d)\n", MAXSLOTS - 1);
+    if (scanf(" %d", &slot) != 1) {
+        scanf("%*[^\n]");
+        error->errorPresent = TRUE;
+        strcpy(error->errorMessage, "invalid slot\n");
+        return;
+    }
     printf("\n");
-    getSlotComplexMemory(complexMemory,complexNumber,slot);
-    //handle error
-
+    getSlotComplexMemory(complexMemory, complexNumber, slot, error);
 }
 
 void saveInMemory( complex_memory* complexMemory,complex_number* complexNumber) {

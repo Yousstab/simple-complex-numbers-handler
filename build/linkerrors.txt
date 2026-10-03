@@ -1,0 +1,8 @@
+================================================================================
+Linker Errors
+Generated: 2026-10-03T10:18:19.459Z
+Total Errors: 1
+================================================================================
+
+[LNK1168] (MSVC)
+impossibile aprire 'C:\Users\samsung\Projects\simple-complex-numbers-handler\build\Debug\complexnumbershandler.exe' per la scrittura [C:\Users\samsung\Projects\simple-complex-numbers-handler\build\complexnumbershandler.vcxproj]

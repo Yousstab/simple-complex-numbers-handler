@@ -56,6 +56,7 @@ void cartesianSetup(complex_number *complexNumber, double real, double imaginary
 void polarSetup(complex_number *complexNumber, double magnitude, double angle, int angleType);
 
 
+
 void complexConjugate(complex_number *complexNumber, complex_number *complexConjugateResult);
 void complexRaisePowerDeMoivre(complex_number *complexNumber, complex_number *complexPower, double power);
 void complexRotate(complex_number *complexNumber, complex_number *complexRotation, double rotation, int angleType);

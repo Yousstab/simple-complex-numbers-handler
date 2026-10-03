@@ -1,3 +1,0 @@
-C:/Users/tabit/OneDrive/Desktop/complexnumbershandler/cmake-build-debug/CMakeFiles/complexnumbershandler.dir
-C:/Users/tabit/OneDrive/Desktop/complexnumbershandler/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/tabit/OneDrive/Desktop/complexnumbershandler/cmake-build-debug/CMakeFiles/rebuild_cache.dir

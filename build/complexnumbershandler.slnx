@@ -5,7 +5,7 @@
 		<BuildType Name="Release"/>
 		<BuildType Name="MinSizeRel"/>
 		<BuildType Name="RelWithDebInfo"/>
-		<Platform Name="win32"/>
+		<Platform Name="x64"/>
 	</Configurations>
 	<Project Path="complexnumbershandler.vcxproj" Type="8bc9ceb8-8b4a-11d0-8d11-00a0c91bc942" Id="e4265a3d-e6d2-3d7f-b28e-9195825e3847">
 		<BuildDependency Project="ZERO_CHECK.vcxproj"/>
